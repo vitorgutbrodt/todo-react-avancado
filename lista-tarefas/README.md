@@ -2,8 +2,6 @@ LISTA DE TAREFAS
 
 Aplicação web para cadastro e gerenciamento de tarefas, desenvolvida em React, com foco em organização, persistência de dados e Responsividade.
 
-
-
 Funcionalidades
 
 - Adicionar novas tarefas
@@ -12,8 +10,6 @@ Funcionalidades
 - Filtrar tarefas (todas, pendentes e concluídas)
 - Persistência de dados
 - Layout responsivo (mobile e desktop)
-
-
 
 Tecnologias Utilizadas
 
@@ -33,3 +29,9 @@ Como Utilizar:
 — Marque o checkbox para tarefas concluídas
 — Os botões laterais (desktop) ou logo abaixo do cadastro (mobile) filtram entre tarefas pendentes, concluídas ou todas
 — o botão vermelho em formato de X remove tarefas
+
+Desenvolvido por João Vitor Gutbrodt
+Projeto de estudo de React
+
+
+
