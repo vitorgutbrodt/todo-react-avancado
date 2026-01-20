@@ -21,17 +21,18 @@ Tecnologias Utilizadas
 - Vite
 
 Como Utilizar:
-— Acesse o Terminal
-— Dê o comando "cd lista-tarefas"
-— Dê o comando npm run dev
-— abra no navegador o local host fornecido 
-— Utiliza o campo de input e o botão para cadastrar uma tarefa
-— Marque o checkbox para tarefas concluídas
-— Os botões laterais (desktop) ou logo abaixo do cadastro (mobile) filtram entre tarefas pendentes, concluídas ou todas
-— o botão vermelho em formato de X remove tarefas
+Acesse o Terminal
+Dê o comando "cd lista-tarefas"
+Dê o comando npm run dev
+Abra no navegador o local host fornecido 
+Utilize o campo de input e o botão para cadastrar uma tarefa
+Marque o checkbox para tarefas concluídas
+Os botões laterais (desktop) ou logo abaixo do cadastro (mobile) filtram entre tarefas pendentes, concluídas ou todas
+O botão vermelho em formato de X remove tarefas
 
 Desenvolvido por João Vitor Gutbrodt
 Projeto de estudo de React
+
 
 
 
