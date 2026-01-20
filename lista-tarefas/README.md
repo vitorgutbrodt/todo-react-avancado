@@ -21,7 +21,7 @@ Tecnologias Utilizadas
 - Vite
 
 Como Utilizar:
-- Acesse o Terminal
+— Acesse o Terminal
 — Dê o comando "cd lista-tarefas"
 — Dê o comando npm run dev
 — abra no navegador o local host fornecido 
@@ -32,6 +32,7 @@ Como Utilizar:
 
 Desenvolvido por João Vitor Gutbrodt
 Projeto de estudo de React
+
 
 
 
