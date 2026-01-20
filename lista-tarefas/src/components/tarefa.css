@@ -1,0 +1,30 @@
+
+.concluida {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 0.5em;
+  padding: 1em;  
+  width: 95%; 
+  background-color: #eee; 
+  border-radius: 8px;   
+}
+
+.tarefa button {
+    background-color: #eee;
+    border: 0.1em solid #eee;
+    color: red;
+    padding: 0.5em;
+    font-weight: bold;    
+    font-size: 1.5em;
+}
+
+.tarefa button:hover {
+    color: white;
+}
+

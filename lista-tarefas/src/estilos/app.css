@@ -1,0 +1,64 @@
+/* layout principal — mobile */
+.tarefas-container-maior {
+  position: relative;
+  padding: 1rem;
+}
+
+/* coluna central */
+.tarefas-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* lista */
+.tarefas-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/* formulário */
+form {
+  text-align: center;
+}
+
+/* inputs e botões — mobile */
+.input-cadastro,
+.botao-cadastro {
+  width: 100%;
+  max-width: 100%;
+  margin: 0.5em 0;
+  padding: 1em;
+  text-align: center;
+}
+
+.input-cadastro {
+  border: 0.2em solid black;
+}
+
+/* botões */
+.botao-cadastro,
+.filtros-botao {
+  background-color: green;
+  color: white;
+  border: 0.2em solid green;
+  border-radius: 0.5em;
+}
+
+/* hover */
+.botao-cadastro:hover,
+.filtros-botao:hover {
+  background-color: aqua;
+  border-color: aqua;
+}
+
+/* filtros — mobile */
+.filtros {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 1rem;
+}

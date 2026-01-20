@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+
+  .tarefas-container-maior {
+    padding: 2rem 1rem;
+  }
+
+  .tarefas-container {
+    max-width: 700px;
+  }
+
+  .input-cadastro,
+  .botao-cadastro {
+    width: 25em;
+    margin: 0.5em;
+  }
+
+  .filtros {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
