@@ -1,9 +1,25 @@
-import { useState, useEffect, memo } from "react";
+import { memo } from "react";
 import './tarefa.css';
-import { useTarefas } from "./context.jsx";
+import { useRecoilState } from "recoil";
+import { tarefasState } from "../state/tarefasrecoil";
 
 function Tarefa({ tarefa }) {
-  const { toggleConcluida, removerTarefa } = useTarefas();
+
+  const [tarefas, setTarefas] = useRecoilState(tarefasState);
+
+  function toggleConcluida(id) {
+    setTarefas(tarefas =>
+      tarefas.map(t =>
+        t.id === id ? { ...t, concluida: !t.concluida } : t
+      )
+    );
+  }
+
+  function removerTarefa(id) {
+    setTarefas(tarefas =>
+      tarefas.filter(t => t.id !== id)
+    );
+  }
 
   return (
     <div className="tarefa">
@@ -21,6 +37,5 @@ function Tarefa({ tarefa }) {
     </div>
   );
 }
-
 
 export default memo(Tarefa);

@@ -1,25 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import './estilos/app.css'
 import './estilos/desktop.css'
 import Tarefa from './components/tarefa.jsx'
-import { useInput } from './hooks/useInput.jsx'
-import { useTarefas } from './components/context.jsx'
+import { useInput } from './hooks/useInput.jsx';
+import { useRecoilState, useRecoilValue } from "recoil";
+import { filtroState, tarefasState, tarefasFiltradasState } from "./state/tarefasrecoil.js";
 
 export default function App() {
 
-  const [filtro, setFiltro] = useState("todas"); // preparando filtro para as tarefas
+  const [filtro, setFiltro] = useRecoilState(filtroState);
+  const [tarefas, setTarefas] = useRecoilState(tarefasState);
 
-  // carregando tarefas do Context
-  const { tarefas, adicionarTarefa } = useTarefas();
+  // carregando tarefas pelo Recoil
+  const tarefasFiltradas = useRecoilValue(tarefasFiltradasState);
 
-  // aplicando filtro às tarefas
-  const tarefasFiltradas = tarefas.filter(t => {
-    if (filtro === "concluidas") return t.concluida;
-    if (filtro === "pendentes") return !t.concluida;
-    return true;
-  });
-
-  const [carregando, setCarregando] = useState(true);
+  useEffect(() => {
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }, [tarefas]);
+  
   const tarefa = useInput();  
 
   useEffect(() => {
@@ -27,18 +25,19 @@ export default function App() {
   }, []) 
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (tarefa.valor.trim() === '') {
-      // alert("Preencha os campos obrigatórios!");
-      return;
-    }
+  if (tarefa.valor.trim() === '') {
+    return;
+  }
 
-    // criação de tarefas através do Context
-    adicionarTarefa(tarefa.valor);
+  setTarefas(tarefas => [
+    ...tarefas,
+    { id: Date.now(), nome: tarefa.valor, concluida: false }
+  ]);
 
-    tarefa.limpar();  
-  }  
+  tarefa.limpar();
+}
 
   return (
     <main>    
